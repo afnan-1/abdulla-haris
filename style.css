@@ -1,0 +1,61 @@
+body.background{
+    
+    background-image:url("https://cdn-sharing.adobecc.com/id/urn:aaid:sc:US:abe466f1-5961-40ba-927b-a796c5e3e2ea;version=0?component_id=b98c0dc8-f06b-4837-b576-a10d36002619&api_key=CometServer1&access_token=1598387753_urn%3Aaaid%3Asc%3AUS%3Aabe466f1-5961-40ba-927b-a796c5e3e2ea%3Bpublic_a5880a98c04621de215114ea0d6958c7e20bb9fa") ;
+    background-size: cover;
+    background-repeat: no-repeat center fixed;
+
+}
+.header-logo{
+    display: flex;
+    justify-content: center;
+    
+    height: 100px;
+    padding: 30px;
+    /* text-align: center; */
+}
+.logo{
+    height: 50px;
+    background-blend-mode: screen;
+}
+.headerlink{
+text-decoration: none;
+}
+/* 
+test
+*/
+
+.borderright{
+    /* height: 30px; */
+    height: 30px !important;
+    border-right:1px solid white;
+}
+.c{
+   font-size: 1.1em;
+}
+.nav-link{
+    color: white !important;
+}
+.nav-link:hover{
+    background-color: coral;
+}
+.center{
+    text-align: center;
+}
+hr{
+    background-color: white;
+    height: 1px;
+}
+*{
+    color: white;
+}
+.imgcarosal{
+    display: inline-block;
+    /* margin:1px; */
+    width: 150px;
+    height: 200px;
+
+}
+.imgcarosaldiv{
+margin: 0 auto;
+padding: 0px 10px 10px 80px;
+}
