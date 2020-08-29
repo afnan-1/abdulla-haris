@@ -5,6 +5,11 @@
 *{
     font-family:myFirstFont ;
 }
+.left{
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
 body.background{
     
     background-image:url("img/Background.png") ;
@@ -14,6 +19,7 @@ body.background{
     background-attachment: fixed;
 
 }
+
 .footer{
     /* margin-top:10px; */
     background-image: url("img/layerfooter.png");
@@ -46,12 +52,22 @@ body.background{
 .headerlink{
 text-decoration: none;
 }
+.pad{
+    /* height: 50px; */
+    padding: 0px 6% 0px 6%;
+}
+.headerhight{
+    height: 40px;
+}
+.headerhover:hover{
+    background-color:#E50A70;
+}
 /* 
 test
 */
 .borderright{
     /* height: 30px; */
-    height: 30px !important;
+    /* height: 30px !important; */
     border-right:1px solid white;
 }
 .c{
@@ -83,7 +99,10 @@ hr{
     /* display: inline-block; */
     /* margin:1px; */
     /* width: 25%; */
-    height: 145px;
+    object-fit: cover;
+    width:155px;
+    padding:0 !important;
+    height: 165px;
 
 }
 .ipadpro{
@@ -115,9 +134,276 @@ padding: 0px 10px 10px 80px;
     font-style: DINAlternate-Bold;
     height: 53px;
 }
+.upperlayer{
+    display: none;
+}
 p{
     margin-bottom: -1rem;
 }
+
+/* @media only screen and (min-width: 1550px) {
+    .imgcarosal{
+        height: 150px !important;
+            width: 100px !important;  
+    }
+} */
+
+
+.navbar-light .navbar-toggler {
+    margin:auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-collapse {
+        padding-left: 38% !important;
+       /* padding-right:50% !important;  */
+   
+   }
+   .arts{
+       margin-left: -10% !important;
+       max-width: 60% !important;
+   }
+   .nav-item:hover{
+    background-color:#E50A70;
+   }
+   .contact{
+       max-width: 40% !important;
+   }
+/* #navbarcontainer{
+    display: none;
+    /* visibility: hidden;} */
+    
+.upperlayer{
+    display: inline-block;
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 5px;
+}
+/* .upperlayer{
+    background-image: url('img/menuicon.png');
+} */
+
+}
+@media only screen and (max-width: 670px) {
+.fontsmall{
+    font-size: 0.9em;
+}
+.maintitle{
+    font-size: 0.8em;
+}
+.headerhight{
+    height: 38px;
+}
+.pad{
+    padding-top: 3px;
+}
+
+}
+@media only screen and (max-width: 639px) {
+.titlelogo{
+    font-size:1.7em;
+}
+}
+
+
+@media only screen and (max-width: 576px) {
+    .titlelogo{
+        font-size: 1.7em;
+    }
+    /* .header-logo{
+        height: 120px;
+    } */
+    .carosal-item{
+        max-width: 70% !important;
+    }
+    }
+    @media only screen and (max-width: 500px) {
+        .titlelogo{
+            font-size:1.4em;
+        }
+        .header-logo{
+            height: 90px;
+        }
+    }
+    @media only screen and (max-width: 492px) {
+    
+            .arts{
+                margin-left: -15% !important;
+            
+                    max-width: 70% !important;
+               }
+                .headerhover{
+                   width: 60px;
+               } 
+    
+    }
+    @media only screen and (max-width: 468px) {
+        .pad{
+            padding-right:4% ;
+            padding-left:4%;
+            padding-top:0 ;
+        }
+    }
+
+    @media only screen and (max-width: 458px) {
+/* .nav-item{
+    width: 104px !important;
+} */
+.c1{
+    max-width:100px !important;
+    /* margin-left: -9% !important; */
+}
+/* .f1{
+    max-width:104px !important;
+    ma
+} */
+   .arts{
+    margin-left: -15% !important;
+
+        max-width: 70% !important;
+    }
+   
+
+    @media only screen and (max-width: 460px) {
+        .titlelogo{
+            font-size:1.4em;
+        }
+        .upperlayer{
+            padding-top: 20px;
+
+        }
+        .navbar-collapse{
+            padding-left: 38% !important;
+        }
+    }
+    @media only screen and (max-width: 433px) {
+        .arts{
+            /* margin-left: -15% !important; */
+        
+                max-width: 80% !important;
+            }
+            .c1{
+                /* max-width:104px !important; */
+                margin-left: -3% !important;
+            }
+    }
+    @media only screen and (max-width: 405px) {
+        .headerhight{
+            height: 35px;
+        }
+    }
+
+    @media only screen and (max-width: 390px) {
+    .arts{
+        max-width: 86% !important;
+        margin-left:-17% !important ;
+    }
+    .c{
+        margin-left:-3% !important ;
+    }
+    }
+    @media only screen and (max-width: 374px) {
+        .titlelogo{
+            font-size: 1.2em;
+        }
+    }
+    @media only screen and (max-width: 364px) {
+.c{
+    margin-left: -3% !important;
+}
+.pad{
+    padding-left:2% ;
+    padding-right:2% ;
+}
+.arts{
+    max-width: 100% !important;
+    margin-left: -24% !important;
+}
+.fontsmall{
+    font-size:0.7em ;
+    }
+    .headerhight{
+        height: 27px;
+        /* padding-bottom:5px; */
+        /* padding-top: 0; */
+    }
+    .borderright{
+        height: 25px;
+        
+    }
+    .maintitle{
+        font-size:0.6em;
+    }
+    }    
+
+@media only screen and (max-width: 350px) {
+
+        .titlelogo{
+            font-size: 1.2em;
+        }
+        .navbar-collapse{
+            padding-left: 35% !important;
+        }
+        .c{
+            margin-left:0 !important ;
+        }
+        .header-logo{
+            height: 80px;
+        }
+        .borderright{
+            height: 22px;
+        }
+    }
+
+    @media only screen and (max-width: 336px) {
+        .arts{
+            margin-left: -23% !important;
+            max-width: 100% !important;
+        }
+        .fontsmall{
+            font-size: 0.7em;
+        }
+    }
+    @media only screen and (max-width: 325px) {
+        .c1{
+            margin-left: -8% !important;
+        }
+    }
+    @media only screen and (max-width: 300px) {
+.navbar-collapse{
+    padding-left: 32% !important;
+}
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* navigation */
+/* The side navigation menu */
+
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
 /* @media only screen and (max-width: 320px) {
     .container{
         /* height: 30px !important; */
@@ -151,48 +437,43 @@ p{
         height: 50%;
         /* margin-bottom: 5px; */
         /* margin-left: 5%; */
-    }
-    .hid{
-        display: none;
-    }
-    .col-lg-3, .col-md-4, .col-sm-6 .col-xs-12{
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
     /* .carousel-inner{
         margin-left:7%;
     } */
-    .imgcarosaldiv{
+    /* .imgcarosaldiv{
         padding: 10px;
   }
   .hid1{
     display: none;
 }
-}
+} */
 @media only screen and (max-width: 442px) {
     .footer img{
-        width: 100%;
+        width: 90%;
     }
-    /* .footer{
-        height: 300px !important;
-    } */
-}
 
-        @media only screen and (max-width: 461px) {
+}
+.carousel-control-prev{
+
+    left: 7px !important
+}
+.carousel-inner{
+    padding-left: 90px !;
+}
+        /* @media only screen and (max-width: 461px) {
 
             .titlelogo{
                 font-size: 1.5em;
                  }
-             }
+
              .header-logo{
                  height: 110px !important;
              }
              .imgcarosal{
-                 /* width: 45%; */
-                 /* height: 40px; */
-             }
+    }            } */
         
-    @media only screen and (max-width: 549px) {
+    /* @media only screen and (max-width: 549px) {
     .titlelogo{
         font-size: 2em;
     }
@@ -205,8 +486,8 @@ p{
     .header-logo{
         height: 100px;
     }
-        }
-        @media only screen and (max-width: 580px) {
+        } */
+        /* @media only screen and (max-width: 580px) {
             .carousel-control-next{
                 right: -3px;
             }
@@ -217,7 +498,7 @@ p{
                 right: 0px;
             }
         
-        }
+        } */
         /* @media only screen and (max-width: 730px) {
         .footer{
             bottom: 0;
@@ -231,9 +512,9 @@ p{
             }
         } */
 
-        @media only screen and (max-width: 767px) {
+        /* @media only screen and (max-width: 767px) {
             .imgcarosal{
-                /* width: 16% !important; */
+            
                 height: 180px;
             }   
             .imgcarosaldiv{
@@ -245,8 +526,8 @@ p{
         .navbar-expand-md{
             display: none;
         }
-            }
-    @media only screen and (max-width: 991px) {
+            } */
+    /* @media only screen and (max-width: 991px) {
         .imgcarosal{
             width: 25%;
             height: 98wpx;
@@ -261,8 +542,8 @@ p{
         height: 100px;
     }
     .hid{display: none;}
-        }
-    @media only screen and (min-width: 1100px) {
+        } */
+    /* @media only screen and (min-width: 1100px) {
         .imgcarosal{
             width: 16%;
         }   
@@ -273,5 +554,3 @@ p{
         height: 100px;
     }
         } */
-
-   

@@ -1,82 +1,81 @@
-// console.log(screen.width);
+// // console.log(screen.width);
+
+// console.log(Math.ceil(2.2)); 
+
+// var folder = "img/galery/";
+window.addEventListener('resize',resizing)
 
 
-
-var folder = "img/galery/";
-
-// function loadimages(data) {
-//     $(data).find("a").attr("href", function (i, val) { 
-//         $(".carousel-item").append( "<img src='"+ folder + val +"'>" );
-//     })
-// }
-// console.log(folder.length);
-function loadImages() {
-    let i = 1;
-    let imgContainer = document.getElementById('imgcontainer')
-    let containerName = document.getElementById('containername')
-    let navbarContainer = document.getElementById('navbarcontainer')
-    while (true) {
-
-
-        let inner = document.getElementsByClassName('carousel-item')[0]
-        let createImg = document.createElement('img')
-        createImg.setAttribute('class', 'imgcarosal col-lg-3 col-md-4 col-sm-6 col-6')
-        let checkimg = createImg.src = `${folder}${i}.jpg`
-        inner.appendChild(createImg)
-        // console.log(inner);
-        console.log(checkimg);
-        i++;
-        // if(screen.width<=1100){
-        //     // if(i===9){
-        //     //     break;
-        //     // }
-        // }
-        if (screen.width <= 1050) {
-            createImg.setAttribute('class', 'ipadpro');
-            imgContainer.className = 'container-lg my-4';
-            containerName.className = 'container-lg container-md my-5';
-            if (i === 26) {
-
-                console.log(createImg);
-                break;
-            }
-        }
-        else if (screen.width <= 1400) {
-            createImg.setAttribute('class', 'laptop');
-            if (i === 15) {
-
-                console.log(createImg);
-                break;
-            }
-        }
-        // else if (screen.width <= 1400) {
-        //     createImg.setAttribute('class', 'laptop');
-        //     if (i === 13) {
-
-        //         console.log(createImg);
-        //         break;
-        //     }
-        // }
-        else if (screen.width <= 3000) {
-            navbarContainer.className = 'container-fluid';
-            createImg.setAttribute('class', 'computerultra');
-            navbarContainer.style.fontSize='2em';
-            imgContainer.className = 'container-fluid';
-            containerName.style.fontSize="2em";
-            if (i === 25) {
-                break;
-            }
-        }
-        else {
-            if (i == 13) {
-                break;
-            }
-        }
-
-
-
+function resizing(){
+    if (screen.width<339){
+        loadImages(1)
+    }
+    else if(screen.width<496){
+        loadImages(2)
+    }
+    else if(screen.width<650){
+        loadImages(3)
+    }
+    else if (screen.width<806){ 
+    loadImages(4)
+    }
+    else if(screen.width<960){
+        loadImages(5);
+    }
+    
+    else if (screen.width < 1200) {
+        loadImages(6)
+    }
+    else if (screen.width <= 1400) {
+        loadImages(7)
+    }
+    else{
+        loadImages(7)
     }
 }
-loadImages()
-
-// loadImages()
+resizing();
+function loadImages(length) {
+    var i=1;
+    let carosalinner = document.getElementsByClassName('carousel-inner')[0];
+   carosalinner.innerHTML="";
+    let firstSilder = true;
+    for(let j=0;j<30/(length*2);j++){
+        let slider = document.createElement('div');
+        slider.setAttribute('class','carousel-item')
+        // let lightGallery = document.createElement('div');
+        // lightGallery.id="lightgallery";
+        // slider.appendChild(lightGallery)
+        if(firstSilder){
+            slider.className='carousel-item active'
+            firstSilder=false;
+        }
+        for(let k =0;k<2*length;k++){
+            // let galeryDiv = document.createElement('div');
+            // galeryDiv.setAttribute('data-src',`img/galery/${i}.jpg`)
+            // galeryDiv.setAttribute('style','width:100px;');
+            let createImg = document.createElement('img')
+            createImg.setAttribute('class','imgcarosal')
+            // createImg.setAttribute('style','width:100px;')
+            createImg.src = `img/galery/${i}.jpg`;
+            slider.appendChild(createImg);
+            // lightGallery.appendChild(galeryDiv);
+            i++;
+            console.log(i);
+            // createImg.setAtribute('class', 'imgcarosal col-lg-2 col-md-4 col-sm-6 col-6')
+        }
+        console.log(slider);
+        carosalinner.appendChild(slider)
+    }
+}
+var car_item = 0
+// let nextBtn = document.getElementById('nextBtn');
+// nextBtn.addEventListener('click',function(e){
+//     let slider = document.getElementsByClassName('carousel-item active');
+//     // console.log(silder[0]);
+//     // console.log(slider[0]);
+//     slider[car_item].className = "carousel-item";
+//     // slider[car_item+1].className = "carousel-item active"
+//     console.log(slider[0]);
+//     console.log(slider[car_item+1]);
+// })
+   
