@@ -6,8 +6,6 @@ window.addEventListener('resize',resizing)
 
 
 function resizing(){
-    let fullBody = document.getElementById('fullbody');
-    fullBody.style.marginTop = '0px';
     var nextcar = document.getElementById('nextcar');
     var prevcar = document.getElementById('prevcar');
 
@@ -25,11 +23,6 @@ function resizing(){
         nextcar.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
         width="100" alt=""></img>
       <span class="sr-only">Next</span>`
-    }
-    if(screen.height>770){
-       
-        fullBody.style.marginTop = '60px';
-        // fullBody.style.marginTop= `${mTop+=mTop}px;`
     }
     if (screen.width<339){
         loadImages(1)

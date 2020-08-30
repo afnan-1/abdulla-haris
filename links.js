@@ -1,4 +1,4 @@
-var dev_path="file:///home/afnan/Desktop/abdullah%20haris";
+// var prod_path="file:///home/afnan/Desktop/abdullah%20haris";
 var prod_path="https://abdullah-haris-films.s3.amazonaws.com";
 function changepagephotos(){
     // window.location.href = dev_path+"/index.html";
@@ -53,14 +53,15 @@ function resizefilm(){
             <span class="sr-only">Next</span>`
         } 
     if(screen.width>659){
-        prevcar1.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
-        width="100" alt=""></img>
+        prevcar1.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true">
       <span class="sr-only">Previous</span>`
-        nextcar1.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
-        width="100" alt=""></img>
+        nextcar1.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true">
       <span class="sr-only">Next</span>`
     }
 }
-if(window.location.href===`${dev_path}/films.html`){
+if(window.location.href===`${prod_path}/films.html`){
     resizefilm();
+}
+function insta(){
+    window.location.href = "https://instagram.com/abdullahharisfilms?igshid=lkiyel6zy829";
 }
