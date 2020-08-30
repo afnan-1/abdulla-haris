@@ -11,14 +11,14 @@ function resizing(){
     var nextcar = document.getElementById('nextcar');
     var prevcar = document.getElementById('prevcar');
 
-    if(screen.width<=652){ 
+    if(screen.width<658){ 
               
             nextcar.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>`
             prevcar.innerHTML=`<span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>`
         } 
-    if(screen.width>=653){
+    if(screen.width>658){
         prevcar.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
         width="100" alt=""></img>
       <span class="sr-only">Previous</span>`

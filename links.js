@@ -45,14 +45,14 @@ function resizefilm(){
     var nextcar1 = document.getElementById('nextcar1');
     var prevcar1 = document.getElementById('prevcar1');
 
-    if(screen.width<=652){ 
+    if(screen.width<658){ 
               
             nextcar1.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>`
             prevcar1.innerHTML=`<span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>`
         } 
-    if(screen.width>=653){
+    if(screen.width>659){
         prevcar1.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
         width="100" alt=""></img>
       <span class="sr-only">Previous</span>`
