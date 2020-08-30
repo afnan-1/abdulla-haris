@@ -1,39 +1,39 @@
 var dev_path="file:///home/afnan/Desktop/abdullah%20haris";
 var prod_path="https://abdullah-haris-films.s3.amazonaws.com";
 function changepagephotos(){
-    window.location.href = dev_path+"/index.html";
-    // window.location.href = prod_path+"/index.html";
+    // window.location.href = dev_path+"/index.html";
+    window.location.href = prod_path+"/index.html";
     var photos = document.getElementById('photos')
     
 }
-if(window.location.href===`${dev_path}/index.html`){
-// if(window.location.href===`${prod_path}/index.html`){
+// if(window.location.href===`${dev_path}/index.html`){
+if(window.location.href===`${prod_path}/index.html`){
     photos.style.backgroundColor='#E50A70 ';
 }
 
 function changepagefilms(){
-    window.location.href = dev_path+"/films.html";
-    // window.location.href = prod_path+"/films.html";
+    // window.location.href = dev_path+"/films.html";
+    window.location.href = prod_path+"/films.html";
     let films = document.getElementById('films')
 
 }
-if(window.location.href===`${dev_path}/films.html`){
-// if(window.location.href===`${prod_path}/films.html`){
+// if(window.location.href===`${dev_path}/films.html`){
+if(window.location.href===`${prod_path}/films.html`){
     films.style.backgroundColor='#E50A70 ';
 }
 function changepageabout(){
-    window.location.href = dev_path+"/about.html";
-    // window.location.href = prod_path+"/about.html";
+    // window.location.href = dev_path+"/about.html";
+    window.location.href = prod_path+"/about.html";
     let about = document.getElementById('about')
 
 }
-if(window.location.href===`${dev_path}/about.html`){
-// if(window.location.href===`${prod_path}/about.html`){
+// if(window.location.href===`${dev_path}/about.html`){
+if(window.location.href===`${prod_path}/about.html`){
     about.style.backgroundColor='#E50A70 ';
 }
 function changepagecomercial(){
-    window.location.href = dev_path+"/comercial.html"
-    // window.location.href = prod_path+"/comercial.html"
+    // window.location.href = dev_path+"/comercial.html"
+    window.location.href = prod_path+"/comercial.html"
     let comercial = document.getElementById('comercial')
 
 }

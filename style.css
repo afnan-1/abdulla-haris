@@ -231,6 +231,13 @@ p{
 
 }
 @media only screen and (max-width: 639px) {
+.carousel-control-next, .carousel-control-prev {
+
+width: 10% !important;
+}
+
+}
+@media only screen and (max-width: 639px) {
 .titlelogo{
     font-size:1.7em;
     padding-top: 9px;
