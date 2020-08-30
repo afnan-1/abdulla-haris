@@ -21,16 +21,13 @@ body.background{
 }
 
 .footer{
-    /* margin-top:10px; */
     background-image: url("img/layerfooter.png");
     justify-content: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    /* height: 30px; */
-    /* margin-bottom: 0; */
+
     text-align: center;
-    /* display: flex; */
     padding:20px;
 }
 .footer img{
@@ -43,7 +40,6 @@ body.background{
     
     height: 100px;
     padding: 30px;
-    /* text-align: center; */
 }
 .logo{
     height: 50px;
@@ -53,7 +49,6 @@ body.background{
 text-decoration: none;
 }
 .pad{
-    /* height: 50px; */
     padding: 0px 6% 0px 6%;
 }
 .headerhight{
@@ -66,8 +61,7 @@ text-decoration: none;
 test
 */
 .borderright{
-    /* height: 30px; */
-    /* height: 30px !important; */
+
     border-right:1px solid white;
 }
 .c{
@@ -96,20 +90,15 @@ hr{
     color: white;
 }
 .imgcarosal{
-    /* display: inline-block; */
-    /* margin:1px; */
-    /* width: 25%; */
+ 
     object-fit: cover;
     width:155px;
     padding:0 !important;
     height: 165px;
 
 }
-.ipadpro{
-    height: 180px !important;
-}
-.laptop{
-    height: 145px !important;
+.carousel-control-next, .carousel-control-prev {
+    width: 0% !important;
 }
 .carousel-inner{
 text-align: center;
@@ -120,11 +109,7 @@ text-align: center;
 .carousel-control-next {
     right: 7px;
     }
-.computerultra{
-    height: 250px !important;
-}
 .imgcarosaldiv{
-/* margin: 0 auto; */
 margin-right: 8%;
 font-size: 0;
 padding: 0px 10px 10px 80px;
@@ -141,12 +126,76 @@ p{
     margin-bottom: -1rem;
 }
 
-/* @media only screen and (min-width: 1550px) {
-    .imgcarosal{
-        height: 150px !important;
-            width: 100px !important;  
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    height: 90%;
+    max-width: 700px;
+  }
+
+/* Add Animation */
+.modal-content{  
+    -webkit-animation-name:zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  /* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
     }
-} */
+  }
 
 
 .navbar-light .navbar-toggler {
@@ -156,12 +205,7 @@ p{
 @media only screen and (max-width: 767px) {
     .navbar-collapse {
         padding-left: 38% !important;
-       /* padding-right:50% !important;  */
    
-   }
-   .arts{
-       margin-left: -10% !important;
-       max-width: 60% !important;
    }
    .nav-item:hover{
     background-color:#E50A70;
@@ -169,19 +213,6 @@ p{
    .contact{
        max-width: 40% !important;
    }
-/* #navbarcontainer{
-    display: none;
-    /* visibility: hidden;} */
-    
-.upperlayer{
-    display: inline-block;
-    position: absolute;
-    padding-top: 30px;
-    padding-left: 5px;
-}
-/* .upperlayer{
-    background-image: url('img/menuicon.png');
-} */
 
 }
 @media only screen and (max-width: 670px) {
@@ -202,6 +233,7 @@ p{
 @media only screen and (max-width: 639px) {
 .titlelogo{
     font-size:1.7em;
+    padding-top: 9px;
 }
 }
 
@@ -210,9 +242,7 @@ p{
     .titlelogo{
         font-size: 1.7em;
     }
-    /* .header-logo{
-        height: 120px;
-    } */
+
     .carosal-item{
         max-width: 70% !important;
     }
@@ -225,18 +255,6 @@ p{
             height: 90px;
         }
     }
-    @media only screen and (max-width: 492px) {
-    
-            .arts{
-                margin-left: -15% !important;
-            
-                    max-width: 70% !important;
-               }
-                .headerhover{
-                   width: 60px;
-               } 
-    
-    }
     @media only screen and (max-width: 468px) {
         .pad{
             padding-right:4% ;
@@ -246,44 +264,24 @@ p{
     }
 
     @media only screen and (max-width: 458px) {
-/* .nav-item{
-    width: 104px !important;
-} */
+
 .c1{
     max-width:100px !important;
-    /* margin-left: -9% !important; */
 }
-/* .f1{
-    max-width:104px !important;
-    ma
-} */
-   .arts{
-    margin-left: -15% !important;
-
-        max-width: 70% !important;
-    }
    
 
     @media only screen and (max-width: 460px) {
         .titlelogo{
             font-size:1.4em;
         }
-        .upperlayer{
-            padding-top: 20px;
-
-        }
         .navbar-collapse{
             padding-left: 38% !important;
         }
     }
     @media only screen and (max-width: 433px) {
-        .arts{
-            /* margin-left: -15% !important; */
-        
-                max-width: 80% !important;
-            }
+
             .c1{
-                /* max-width:104px !important; */
+          
                 margin-left: -3% !important;
             }
     }
@@ -294,10 +292,6 @@ p{
     }
 
     @media only screen and (max-width: 390px) {
-    .arts{
-        max-width: 86% !important;
-        margin-left:-17% !important ;
-    }
     .c{
         margin-left:-3% !important ;
     }
@@ -315,17 +309,11 @@ p{
     padding-left:2% ;
     padding-right:2% ;
 }
-.arts{
-    max-width: 100% !important;
-    margin-left: -24% !important;
-}
 .fontsmall{
     font-size:0.7em ;
     }
     .headerhight{
         height: 27px;
-        /* padding-bottom:5px; */
-        /* padding-top: 0; */
     }
     .borderright{
         height: 25px;
@@ -340,6 +328,10 @@ p{
 
         .titlelogo{
             font-size: 1.2em;
+            padding-top: 0px;
+        }
+        .logo{
+            padding-bottom: 23px;
         }
         .navbar-collapse{
             padding-left: 35% !important;
@@ -348,7 +340,7 @@ p{
             margin-left:0 !important ;
         }
         .header-logo{
-            height: 80px;
+            height: 70px;
         }
         .borderright{
             height: 22px;
@@ -356,10 +348,6 @@ p{
     }
 
     @media only screen and (max-width: 336px) {
-        .arts{
-            margin-left: -23% !important;
-            max-width: 100% !important;
-        }
         .fontsmall{
             font-size: 0.7em;
         }
@@ -376,78 +364,6 @@ p{
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* navigation */
-/* The side navigation menu */
-
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-/* @media only screen and (max-width: 320px) {
-    .container{
-        /* height: 30px !important; */
-    
-        /* margin-left: 5%;} */
-
-
-
-
-        /* ----------------------comenting ---------------->>> */
-        /* @media only screen and (max-width: 320px) {
-            .titlelogo{
-                font-size: 1.5em !important;
-            }
-            .imgcarosal{
-                height: 150px !important;
-            }
-
-        }
-
-        @media only screen and (max-width: 400px) {
-            .footer img{
-                width: 100%;
-            }
-            
-        }
-
-@media only screen and (max-width: 425px) {
-    .imgcarosal{
-        width: 50%;
-        height: 50%;
-        /* margin-bottom: 5px; */
-        /* margin-left: 5%; */
-    
-    /* .carousel-inner{
-        margin-left:7%;
-    } */
-    /* .imgcarosaldiv{
-        padding: 10px;
-  }
-  .hid1{
-    display: none;
-}
-} */
 @media only screen and (max-width: 442px) {
     .footer img{
         width: 90%;
@@ -461,96 +377,4 @@ p{
 .carousel-inner{
     padding-left: 90px !;
 }
-        /* @media only screen and (max-width: 461px) {
-
-            .titlelogo{
-                font-size: 1.5em;
-                 }
-
-             .header-logo{
-                 height: 110px !important;
-             }
-             .imgcarosal{
-    }            } */
-        
-    /* @media only screen and (max-width: 549px) {
-    .titlelogo{
-        font-size: 2em;
     }
-    .hid3{
-        display: none;
-    }
-    .imgcarosal{
-        width: 33% !important;
-    }
-    .header-logo{
-        height: 100px;
-    }
-        } */
-        /* @media only screen and (max-width: 580px) {
-            .carousel-control-next{
-                right: -3px;
-            }
-        
-        }
-        @media only screen and (max-width: 665px) {
-            .carousel-control-next{
-                right: 0px;
-            }
-        
-        } */
-        /* @media only screen and (max-width: 730px) {
-        .footer{
-            bottom: 0;
-        }
-        
-        } */
-        /* @media only screen and (max-height: 654px) {
-
-            .footer{
-                bottom: auto;
-            }
-        } */
-
-        /* @media only screen and (max-width: 767px) {
-            .imgcarosal{
-            
-                height: 180px;
-            }   
-            .imgcarosaldiv{
-                margin-right: 14%;
-        }
-        .header-logo{
-            height: 100px;
-        }
-        .navbar-expand-md{
-            display: none;
-        }
-            } */
-    /* @media only screen and (max-width: 991px) {
-        .imgcarosal{
-            width: 25%;
-            height: 98wpx;
-        }  
-        .header-logo{
-            height: 100px;
-        }
-        .imgcarosaldiv{
-            margin-right: 11%;
-    }
-    .header-logo{
-        height: 100px;
-    }
-    .hid{display: none;}
-        } */
-    /* @media only screen and (min-width: 1100px) {
-        .imgcarosal{
-            width: 16%;
-        }   
-        .imgcarosaldiv{
-            margin-right: 7%;
-    }
-    .header-logo{
-        height: 100px;
-    }
-        } */

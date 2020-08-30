@@ -1,12 +1,36 @@
-// // console.log(screen.width);
 
-// console.log(Math.ceil(2.2)); 
-
+var dev_path="file:///home/afnan/Desktop/abdullah%20haris";
+var prod_path="https://abdullah-haris-films.s3.amazonaws.com";
 // var folder = "img/galery/";
 window.addEventListener('resize',resizing)
 
 
 function resizing(){
+    let fullBody = document.getElementById('fullbody');
+    fullBody.style.marginTop = '0px';
+    var nextcar = document.getElementById('nextcar');
+    var prevcar = document.getElementById('prevcar');
+
+    if(screen.width<=652){ 
+              
+            nextcar.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>`
+            prevcar.innerHTML=`<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>`
+        } 
+    if(screen.width>=653){
+        prevcar.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
+        width="100" alt=""></img>
+      <span class="sr-only">Previous</span>`
+        nextcar.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
+        width="100" alt=""></img>
+      <span class="sr-only">Next</span>`
+    }
+    if(screen.height>770){
+       
+        fullBody.style.marginTop = '60px';
+        // fullBody.style.marginTop= `${mTop+=mTop}px;`
+    }
     if (screen.width<339){
         loadImages(1)
     }
@@ -42,40 +66,24 @@ function loadImages(length) {
     for(let j=0;j<30/(length*2);j++){
         let slider = document.createElement('div');
         slider.setAttribute('class','carousel-item')
-        // let lightGallery = document.createElement('div');
-        // lightGallery.id="lightgallery";
-        // slider.appendChild(lightGallery)
         if(firstSilder){
             slider.className='carousel-item active'
             firstSilder=false;
         }
-        for(let k =0;k<2*length;k++){
-            // let galeryDiv = document.createElement('div');
-            // galeryDiv.setAttribute('data-src',`img/galery/${i}.jpg`)
-            // galeryDiv.setAttribute('style','width:100px;');
+        for(let k =0;k<(2*length);k++){
             let createImg = document.createElement('img')
             createImg.setAttribute('class','imgcarosal')
-            // createImg.setAttribute('style','width:100px;')
+            createImg.id = `myImg${i}`;
+            createImg.setAttribute('onclick','imgmodal(this)');
             createImg.src = `img/galery/${i}.jpg`;
             slider.appendChild(createImg);
-            // lightGallery.appendChild(galeryDiv);
             i++;
-            console.log(i);
-            // createImg.setAtribute('class', 'imgcarosal col-lg-2 col-md-4 col-sm-6 col-6')
-        }
-        console.log(slider);
+            if(i===33){
+                break;
+            }
+                }
         carosalinner.appendChild(slider)
     }
 }
-var car_item = 0
-// let nextBtn = document.getElementById('nextBtn');
-// nextBtn.addEventListener('click',function(e){
-//     let slider = document.getElementsByClassName('carousel-item active');
-//     // console.log(silder[0]);
-//     // console.log(slider[0]);
-//     slider[car_item].className = "carousel-item";
-//     // slider[car_item+1].className = "carousel-item active"
-//     console.log(slider[0]);
-//     console.log(slider[car_item+1]);
-// })
+
    

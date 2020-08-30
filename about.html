@@ -8,8 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../films/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="films/style.css">
     <title>ABDULLAH HARIS FILMS</title>
 </head>
 
@@ -17,7 +17,7 @@
 
     <div class="header-logo1">
         <h2 class="text-white titlelogo">ABDULLAH HARIS FILMS</h2>
-        <img class="logo" src="../img/logo@2x.png">
+        <img class="logo" src="img/logo@2x.png">
     </div>
 
 
@@ -27,18 +27,18 @@
     <!-- NAVBAR -->
     <div class="container mt-2 mb-1">
         <div class="row headerhight">
-            <div class="col center headerhight borderright pad" onclick="changepagephotos()">
-                <p class="pt-1 fontsmall headerhight headerhover"> PHOTOS </p>
-            </div>
-            <div class="col center borderright pad" onclick="changepagefilms()">
-                <p class="pt-1 fontsmall headerhight headerhover">FILMS</p>
-            </div>
-            <div class="col center borderright pad">
-                <p class="pt-1 fontsmall headerhight headerhover">COMERCIAL</p>
-            </div>
-            <div class="col center pad" onclick="changepageabout()">
-                <p class="pt-1 fontsmall headerhight headerhover" onclick="changepageabout()">ABOUT</p>
-            </div>
+            <div class="col center headerhight borderright pad" >
+                <p class="pt-1 fontsmall headerhight headerhover" onclick="changepagephotos()" id='photos'> PHOTOS </p>
+              </div>
+              <div class="col center borderright pad" >
+                <p class="pt-1 fontsmall headerhight headerhover" onclick="changepagefilms()" id="films">FILMS</p>
+              </div>
+              <div class="col center borderright pad" >
+                <p class="pt-1 fontsmall headerhight headerhover" onclick="changepagecomercial()" id="comercial">COMERCIAL</p>
+              </div>
+              <div class="col center pad" >
+                <p class="pt-1 fontsmall headerhight headerhover" onclick="changepageabout()" id="about">ABOUT</p>
+              </div>
         </div>
     </div>
 
@@ -58,9 +58,9 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error unde, dolor anim
 
         </div>
         <div class="footer1">
-            <img width="300" src="../img/instalogo.png" alt="">
+            <img width="300" src="img/instalogo.png" alt="">
         </div>
     </div>
 </body>
-<script src="../links.js"></script>
+<script src="links.js"></script>
 </html>
