@@ -8,7 +8,11 @@ window.addEventListener('resize',resizing)
 function resizing(){
     var nextcar = document.getElementById('nextcar');
     var prevcar = document.getElementById('prevcar');
-
+    if(screen.width<380 && screen.height>810){
+        let carouselExampleControls = document.getElementById('carouselExampleControls');
+        carouselExampleControls.style.paddingTop = '65px';
+        carouselExampleControls.style.paddingBottom = '65px';
+    }
     if(screen.width<658){ 
               
             nextcar.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -17,11 +21,9 @@ function resizing(){
             <span class="sr-only">Next</span>`
         } 
     if(screen.width>658){
-        prevcar.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
-        width="100" alt=""></img>
+        prevcar.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true">
       <span class="sr-only">Previous</span>`
-        nextcar.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true"><img class="left" src="img/arrow.png"
-        width="100" alt=""></img>
+        nextcar.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true">
       <span class="sr-only">Next</span>`
     }
     if (screen.width<339){
@@ -43,9 +45,6 @@ function resizing(){
     else if (screen.width < 1200) {
         loadImages(6)
     }
-    else if (screen.width <= 1400) {
-        loadImages(7)
-    }
     else{
         loadImages(7)
     }
@@ -59,11 +58,12 @@ function loadImages(length) {
     for(let j=0;j<30/(length*2);j++){
         let slider = document.createElement('div');
         slider.setAttribute('class','carousel-item')
+       
         if(firstSilder){
             slider.className='carousel-item active'
             firstSilder=false;
         }
-        for(let k =0;k<(2*length);k++){
+        for(let k =0;k<2*length;k++){
             let createImg = document.createElement('img')
             createImg.setAttribute('class','imgcarosal')
             createImg.id = `myImg${i}`;
@@ -71,11 +71,12 @@ function loadImages(length) {
             createImg.src = `img/galery/${i}.jpg`;
             slider.appendChild(createImg);
             i++;
-            if(i===33){
-                break;
+            console.log(i);
+            
             }
-                }
+            
         carosalinner.appendChild(slider)
+       
     }
 }
 

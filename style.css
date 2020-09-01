@@ -19,7 +19,10 @@ body.background{
     background-attachment: fixed;
 
 }
-
+.test{
+    position: fixed;
+    height: 70px;
+}
 .footer{
     background-image: url("img/layerfooter.png");
     justify-content: center;
@@ -38,8 +41,8 @@ body.background{
     background-image: url("img/Layerupper.png");
     justify-content: center;
     
-    height: 100px;
-    padding: 30px;
+    height: 70px;
+    padding-top: 15px;
 }
 .logo{
     height: 50px;
@@ -121,6 +124,11 @@ padding: 0px 10px 10px 80px;
 }
 .upperlayer{
     display: none;
+}
+.hrbotom{
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 0.5px;
 }
 p{
     margin-bottom: -1rem;
@@ -269,7 +277,8 @@ width: 10% !important;
             font-size:1.4em;
         }
         .header-logo{
-            height: 90px;
+            height: 70px;
+            padding-top: 15px;
         }
     }
     @media only screen and (max-width: 468px) {
@@ -358,6 +367,7 @@ width: 10% !important;
         }
         .header-logo{
             height: 70px;
+            padding-top: 30px;
         }
         .borderright{
             height: 22px;

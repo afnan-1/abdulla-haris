@@ -3,7 +3,7 @@ var prod_path="https://abdullah-haris-films.s3.amazonaws.com";
 function changepagephotos(){
     // window.location.href = dev_path+"/index.html";
     window.location.href = prod_path+"/index.html";
-    var photos = document.getElementById('photos')
+//     var photos = document.getElementById('photos')
     
 }
 // if(window.location.href===`${dev_path}/index.html`){
@@ -45,14 +45,14 @@ function resizefilm(){
     var nextcar1 = document.getElementById('nextcar1');
     var prevcar1 = document.getElementById('prevcar1');
 
-    if(screen.width<658){ 
+    if(screen.width<770){ 
               
-            nextcar1.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>`
-            prevcar1.innerHTML=`<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>`
+        nextcar1.innerHTML=` <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>`;
+        prevcar1.innerHTML=`<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>`;
         } 
-    if(screen.width>659){
+    else{
         prevcar1.innerHTML=` <img src="img/left.svg" class="arrow" width="75" aria-hidden="true">
       <span class="sr-only">Previous</span>`
         nextcar1.innerHTML=`<img src="img/right.svg" class="arrow" width="75" aria-hidden="true">
@@ -65,3 +65,4 @@ if(window.location.href===`${prod_path}/films.html`){
 function insta(){
     window.location.href = "https://instagram.com/abdullahharisfilms?igshid=lkiyel6zy829";
 }
+resizefilm();
